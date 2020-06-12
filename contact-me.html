@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact-me</title>
+  <script>
+    function cheackNumber(mobile) {
+      alert(isNaN(mobile))
+      if (mobile.length !== 10 && isNaN(mobile)) {
+        alert("please enter valid phone number")
+      }
+      else {
+        alert("hey your mobile number is valid")
+      }
+    }
+  </script>
+</head>
+
+
+<body>
+  <h1>contact me</h1>
+  <p>my address</p>
+  <P>9370112472</P>
+  <p>pune</p>
+  <br>
+  <form action="mailto:salunkevishal05@gmail.com" method="POST" enctype="text/plain">
+    <label>your name:</label>
+    <input type="text" name="yourname" value=""><br>
+    <label>your email:</label>
+    <input type="email" value="" name="youremail"><br>
+    <label>your mobile number:</label>
+    <input type="text" id="yournumber" value="" onchange=cheackNumber(this.value)><br>
+
+    <label>your message:</label><br>
+    <textarea name="yourmessage" rows="10" cols="30"></textarea><br>
+
+    <input type="submit">
+
+
+  </form>
+
+</body>
+
+</html>
